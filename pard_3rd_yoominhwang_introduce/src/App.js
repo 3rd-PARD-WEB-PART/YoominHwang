@@ -16,26 +16,6 @@ function App() {
           #INFJ #AI컴퓨터공학심화 #PARD #3기 #웹
         </h2>
       </header>
-      <div className="goal">
-        <p className="text">나의 24-1 학기 목표</p>
-        <div className="goal-detail">
-          <div className="first">
-            <p className="subtext">
-              1. 성취 경험 쌓기
-            </p>
-          </div>
-          <div className="second">
-            <p className="subtext">
-              2. 인격적으로 성장하기
-            </p>
-          </div>
-          <div className="third">
-            <p className="subtext">
-              3. 건강한 몸과 마음
-            </p>
-          </div>
-        </div>
-      </div>
       <div className="favorite">
         <p className="text">
           내가 좋아하는 3가지
@@ -56,8 +36,28 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="music">
-        <img src="/lp.png" className="lp" alt="LP Player" />
+      <div className="goal">
+        <p className="text">나의 24-1 학기 목표</p>
+        <div className="goal-detail">
+          <div className="first">
+            <p className="subtext">
+              1. 성취 경험 쌓기
+            </p>
+          </div>
+          <div className="second">
+            <p className="subtext">
+              2. 인격적으로 성장하기
+            </p>
+          </div>
+          <div className="third">
+            <p className="subtext">
+              3. 건강한 몸과 마음
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="motto">
+        <p className="text">좌우명<br />실수를 통해 배우면서 조금씩 나아지자!</p>
       </div>
       <div className="bottom">
       <a

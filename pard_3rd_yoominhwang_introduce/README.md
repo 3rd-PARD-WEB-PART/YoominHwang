@@ -12,6 +12,9 @@ Each pages include:
 I tried to practice and have a detailed revision of 'markup language' including HTML, CSS, Js.
 I found myself getting more and more interested in learning new skills such as importing better font styles or icons from outer libraries and decorating images with different types of border as the project progresses.
 
+## IDE
+Visual Studio Code
+
 ## Reference
 - Color Combination: https://pigment.shapefactory.co/
 - Font: https://noonnu.cc/

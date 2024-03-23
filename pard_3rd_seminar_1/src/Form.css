@@ -1,0 +1,42 @@
+.app {
+    text-align: left;
+    font-weight: bold;
+}
+
+* {
+    margin: 0;
+    padding: 2px;
+}
+
+.name {
+    padding-bottom: 0px;
+}
+
+.nameinput {
+    height: 30px;
+    width: 300px;
+}
+
+.email {
+}
+
+.emailinput {
+    height: 30px;
+    width: 300px;
+}
+
+.msg {
+
+}
+
+.msginput {
+    height: 50px;
+    width: 300px;
+}
+
+.btn {
+    height: 30px;
+    width: 300px;
+    color: white;
+    background-color: #2055FF;
+}

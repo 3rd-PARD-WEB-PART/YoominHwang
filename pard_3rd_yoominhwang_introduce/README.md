@@ -1,16 +1,20 @@
 # PARD Web HW1 Introducing Myself
-The references for color and font of this page are
-https://pigment.shapefactory.co/
-https://noonnu.cc/
+## Topic
+The first assignment is to create a web page that contains information that can introduce myself.
+Each pages include:
+- Who I am
+- My Favorite Things
+- My Goals for This Semester
+- My Motto
+- SNS
 
-## Available Scripts
-In this project you can find:
-### 'Who I am'
+## Skills
+I tried to practice and have a detailed revision of 'markup language' including HTML, CSS, Js.
+I found myself getting more and more interested in learning new skills such as importing better font styles or icons from outer libraries and decorating images with different types of border as the project progresses.
 
-### 'My Favorites'
+## IDE
+Visual Studio Code
 
-### 'My Goals'
-
-### 'My Motto'
-
-### 'SNS'
+## Reference
+- Color Combination: https://pigment.shapefactory.co/
+- Font: https://noonnu.cc/

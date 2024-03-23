@@ -1,5 +1,5 @@
 # PARD Web HW1 Introducing Myself
-The references for color and font of this page correspond to
+The references for color and font of this page are
 https://pigment.shapefactory.co/
 https://noonnu.cc/
 

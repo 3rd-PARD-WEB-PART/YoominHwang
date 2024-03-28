@@ -8,7 +8,9 @@ function App() {
         <div className="logocontainer">
           <img src="/logo.png" className="logo" alt="Today Home" />
         </div>
-        <div className="container"><RegisterPage /></div>
+        <div className="container">
+        <RegisterPage />
+        </div>
       </div>
     </div>
   );

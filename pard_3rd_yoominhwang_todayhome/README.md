@@ -14,4 +14,4 @@ Thus, I had to create each type of Components in similar form but with different
 Visual Studio Code
 
 ## Reference
-- Figma: [PARD_3rd_WEB_Assignmen](https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
+- Figma: [PARD_3rd_WEB_Assignment](https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)

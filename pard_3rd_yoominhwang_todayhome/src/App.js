@@ -9,7 +9,8 @@ function App() {
           <img src="/logo.png" className="logo" alt="Today Home" />
         </div>
         <div className="container">
-        <RegisterPage />
+        <ProfilePage />
+        {/* <RegisterPage /> */}
         </div>
       </div>
     </div>

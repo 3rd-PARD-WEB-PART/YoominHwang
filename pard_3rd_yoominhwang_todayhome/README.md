@@ -14,4 +14,42 @@ Thus, I had to create each type of Components in similar form but with different
 Visual Studio Code
 
 ## Reference
-- Figma: [PARD_3rd_WEB_Assignment](https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
+- Figma: 과제1 [PARD_3rd_WEB_Assignment](https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
+
+# PARD Web HW2
+## 목표
+- React의 Hook 라이브러리를 사용할 수 있다.
+- Styled Components를 이용하여 스타일링 할 수 있다.
+- Events를 활용하여 사용자의 인터렉션에 반응하는 페이지를 만들 수 있다.
+
+## 과제 설명
+1. 프로필 페이지 구현
+Profile.js
+
+`styled components` 사용하여 페이지 스타일링
+
+2. 회원정보수정 페이지 구현
+EditProfile.js
+
+`styled components` 사용하여 페이지 스타일링
+
+`hook` 사용하여 회원정보 상태 저장 기능
+
+프로필 이미지 사진을 클릭 시 파일 선택 기능
+
+3. Events 버튼 만들기
+`event` 와 `hook` 좋아요 하트 이미지 클릭 시 색변화 및 숫자변화 있도록 수정
+
+## IDE
+Visual Studio Code
+
+## 자료
+- Figma: 과제2 [PARD_3rd_Web_Assignment] (https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
+
+# HW3
+
+
+## 자료
+- Figma: 과제2 [PARD_3rd_Web_Assignment] (https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
+- Icons: react-icons
+`npm install react-icons --save // npm`

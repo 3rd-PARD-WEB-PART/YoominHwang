@@ -1,0 +1,90 @@
+h2 {
+    font-weight: 400;
+    font-size: 13px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    color: #000000;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 21.78px;
+}
+
+p {
+    color: #000000;
+    text-align: left;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.78px;
+}
+
+.num {
+    color: #35C5F0;
+}
+
+.fnum {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 21.78px;
+}
+
+.header-bottom {
+    background-color: #FFFFFF;
+    width: 100%;
+    color: #000000;
+    display: flex;
+    font-size: 15px;
+
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #EAEBEF;
+}
+
+.contents {
+    background-color: #FFFFFF;
+}
+
+.profile-pic {
+    width: 130px;
+    height: 129.5px;
+
+    margin: 10px;
+}
+
+.name {
+    font-size: 26px;
+    font-weight: 700;
+
+    margin: 10px;
+}
+
+.follow {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.profile-bottom {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.box-wrapper {
+    margin-top: 49.8px;
+}
+
+.box {
+    margin-bottom: 61.77px;
+}

@@ -1,18 +1,28 @@
-import './App.css';
-import RegisterPage from "./Pages/RegisterPage/RegisterPage";
+import './css/App.css';
+import {Route, Routes} from 'react-router-dom';
+import Profile from './Pages/ProfilePage/Profile';
+import EditProfile from './Pages/EditPage/EditProfile';
+import NavBar from './Pages/Component/Layout'
 
 function App() {
   return (
     <div className="App">
-      <div className="Wrapper">
+      <Routes>
+        <Route element={<NavBar />}>
+          <Route path="/" element={<Profile />} />
+          <Route path="/about" element={<EditProfile />} />
+        </Route>
+      </Routes>
+
+      {/* Register Page */}
+      {/* <div className="Wrapper">
         <div className="logocontainer">
-          <img src="/logo.png" className="logo" alt="Today Home" />
+          <img src="/logo.psng" className="logo" alt="Today Home" />
         </div>
         <div className="container">
-        <ProfilePage />
-        {/* <RegisterPage /> */}
+        <RegisterPage />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

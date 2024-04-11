@@ -4,6 +4,21 @@ html { font-family: 'Inter', sans-serif; }
 .App {
   display: flex;
   justify-content: center;
+  background-color: #FAFAFA;
+  min-height: 100vh;
+
+  color: #292929;
+  text-align: center;
+  font-family: 'Inter';
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Register Page */
+/*
+.App {
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-color: #FAFAFA;
   min-height: 100vh;
@@ -12,6 +27,7 @@ html { font-family: 'Inter', sans-serif; }
   font-family: 'Inter';
   font-weight: 700;
 }
+
 
 .Wrapper {
   width: 635px;
@@ -96,4 +112,4 @@ html { font-family: 'Inter', sans-serif; }
 
 a:link {
   color: inherit;
-}
+} */

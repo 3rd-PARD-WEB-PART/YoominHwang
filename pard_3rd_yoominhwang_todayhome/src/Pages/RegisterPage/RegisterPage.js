@@ -4,7 +4,7 @@ import Password from "./Component/Password";
 import PasswordCheck from "./Component/PasswordCheck";
 import SignIn from "./Component/SignIn";
 import Input from "./Component/Input";
-import "../../App.css";
+import "../../css/Reg.css";
 
 function RegisterPage() {
     // const email = {

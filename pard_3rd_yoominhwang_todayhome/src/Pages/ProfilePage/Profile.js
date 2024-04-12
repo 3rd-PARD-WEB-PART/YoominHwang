@@ -1,11 +1,22 @@
 import "../../css/Profile.css";
 import styled from "styled-components";
 import { BsBookmark } from "react-icons/bs";
-import { BsHeart } from "react-icons/bs";
 import { BsTicketPerforated } from "react-icons/bs";
-import { Link, Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Navigate, Link, Outlet } from "react-router-dom";
+import { PiCursorClickDuotone } from "react-icons/pi";
 
-function Profile() {
+const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
+    // const handleClick = () => {
+    //     setIsLoggedIn(false);
+    // };
+
+    const [ heart, setHeart ] = useState(false);
+
+    // if(!isLoggedIn) {
+    //     return <Navigate to="/profile" replace={true} />
+    // }
+
     return (
         <div className="profile-body">
             <Outlet />
@@ -36,36 +47,41 @@ function Profile() {
                             <Follow>팔로잉 <span className="fnum">0</span></Follow>
                             <div></div>
                         </div>
-                        <Button>설정</Button>
+                        <Link to="/edit"><Button>설정</Button></Link>
                     </div>
                     <Line />
                     <div className="profile-bottom">
                         <div>
                             <Bookmark />
-                            <h2>스크랩북</h2>
+                            <p className="label">스크랩북</p>
                             <h3>0</h3> 
                         </div>
                         <div>
-                            <Heart />
-                            <h2>좋아요</h2> 
-                            <h3>0</h3>                
+                            <Heart  src={heart? "/redheart.png":"/heart.png"} className="heart-icon"
+                            onClick={() => {
+                                setHeart((heart) => !heart);
+            
+                            }}
+                            />
+                            <p className="label">좋아요</p> 
+                            <h3>{heart ? "1" : "0"}</h3>                
                         </div>
                         <div>
                             <Ticket />
-                            <h2>내 쿠폰</h2>
+                            <p className="label">내 쿠폰</p>
                             <h3>0</h3> 
                         </div>
                     </div>
                 </ProfileBox>
                 <div className="box-wrapper">
                     <div className="box">
-                        <p>사진 <span className="num">0</span></p>
+                        <p className="heading">사진 <span className="num">0</span></p>
                         <Box>
                             <Msg>+ 첫 번째 사진을 올려보세요.</Msg>
                         </Box>
                     </div>
                     <div className="box">
-                        <p>집들이 <span className="num">0</span></p>
+                        <p className="heading">집들이 <span className="num">0</span></p>
                         <Box>
                             <Msg>+ 첫 번째 집들이를 올려보세요.</Msg>
                         </Box>
@@ -75,7 +91,7 @@ function Profile() {
             </div>
         </div>
     );
-}
+};
 
 const Msg = styled.p`
     font-family: Inter;
@@ -88,7 +104,7 @@ const Msg = styled.p`
 `
 
 const Box = styled.div`
-    width: 750px;
+    width: 700px;
     height: 187.28px;
 
     border: 1px dashed #757575;
@@ -105,8 +121,13 @@ const Bookmark = styled(BsBookmark)`
     font-size: 24.9px;
 `
 
-const Heart = styled(BsHeart)`
-    font-size: 24.9px;
+const Heart = styled.img`
+    &:hover {
+        color: #F05656;
+        transition: 0.5s;
+    }
+    height: 24.9px;
+    width: 24.9px;
 `
 
 const Ticket = styled(BsTicketPerforated)`
@@ -117,12 +138,21 @@ const MenuBar = styled.div`
     display: flex;
 `
 
-const MyLink = styled.ul`
+const MyLink = styled(Link)`
     &:hover {
         color: #35C5F0;
         transition: 0.5s;
     }
+    padding: 10px;
     padding-bottom: 5px;
+
+    text-decoration: none;
+    color: #292929;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18.15px;
+    text-align: center;
 `
 
 const ProfileBox = styled.div`
@@ -165,6 +195,8 @@ const Button = styled.button`
 
     margin: 10px;
     margin-bottom: 20px;
+
+    cursor: pointer;
 `
   
 export default Profile;

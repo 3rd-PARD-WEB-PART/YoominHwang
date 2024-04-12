@@ -16,6 +16,10 @@
     border-color: #EAEBEF;
 }
 
+.menu1 {
+    padding: 10px;
+}
+
 .header-bottom {
     display: flex;
     width: 100%;
@@ -43,7 +47,6 @@
     width: 360px;
     height: 43px;
 
-    padding-top: 10px;
     padding-left: 110px;
 }
 
@@ -65,7 +68,7 @@ input {
 .profile-icon {
     width: 43px;
     height: 43px;
-    padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 20px;
 }
 

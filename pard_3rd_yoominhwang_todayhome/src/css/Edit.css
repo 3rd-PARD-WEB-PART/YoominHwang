@@ -1,0 +1,147 @@
+.edit-contents {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-contents-wrapper {
+    display: grid;
+
+    width: 1236px;
+    height: 956px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px 0px #00000033;
+
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.edit-email {
+    width: 400px;
+}
+
+.edit-side {
+    display: grid;
+    justify-content: right;
+}
+
+.leave {
+    margin-top: 59px;
+    margin-right: 50px;
+
+    color: #F05656;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+}
+
+.component {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 40px;
+}
+
+.edit-header {
+    margin-top: 50px;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.input-wrapper {
+    border-style: none;
+    width: 400px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: left;
+}
+
+.component-label {
+    width: 88px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.15px;
+    text-align: left;
+    padding-top: 10px;
+    margin-right: 12px;
+}
+
+.required {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.73px;
+    text-align: left;
+    color: #757575;
+}
+
+.component-element {
+    display: grid;
+    grid-template-rows: auto auto;
+    justify-content: left;
+}
+
+.edit-input {
+    width: 190px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #DBDBDB;
+    margin: 5px;
+
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.15px;
+}
+
+.edit-input-single {
+    width: 400px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #DBDBDB;
+    margin: 5px;
+
+    text-align: left;
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 18.15px;
+}
+
+.separator {
+    text-align: center;
+    display: flex;
+    flex: 0 0 20px;
+    line-height: 40px;
+    color: #DBDBDB;
+}
+
+.message {
+    margin: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 15.73px;
+    text-align: left;
+    font-variation-settings: 'slnt' 0;
+    color: #9E9E9E;
+}
+
+.edit-info {
+    text-align: left;
+    padding-left: 50px;
+}
+
+.edit-button {
+    display: flex;
+    width: 1236px;
+    justify-content: right;
+}
+
+input[type='radio']:checked {
+    border-radius: 20%;
+    background-color: #35C5F0;
+}

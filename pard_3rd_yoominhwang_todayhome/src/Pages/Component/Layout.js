@@ -1,4 +1,4 @@
-import{Outlet} from 'react-router-dom';
+import{Link, Outlet} from 'react-router-dom';
 import styled from "styled-components";
 import { BsBookmark } from "react-icons/bs";
 import { SlBell } from "react-icons/sl";
@@ -12,9 +12,11 @@ const NavBar = () => {
                 <div className="header-top">
                     <MenuBar>
                         <MyLink to="/"><img src="/logo.png" className="logo" alt="Today Home" /></MyLink>
-                        <MyLink to="/">커뮤니티</MyLink>
-                        <MyLink to="/">쇼핑</MyLink>
-                        <MyLink to="/">인테리어/생활</MyLink>
+                        <div className="menu1">
+                            <MyLink to="/">커뮤니티</MyLink>
+                            <MyLink to="/">쇼핑</MyLink>
+                            <MyLink to="/">인테리어/생활</MyLink>
+                        </div>
                         <div class="search">
                             <img src="search.png" className="search-img" />
                             <input type="text" placeholder="통합검색" />
@@ -31,10 +33,10 @@ const NavBar = () => {
                 </div>
                 <div className="header-bottom">
                     <MenuBar>
-                        <MyLink to="/">프로필</MyLink>
+                        <MyLink to="/profile">프로필</MyLink>
                         <MyLink to="/">나의 쇼핑</MyLink>
                         <MyLink to="/">나의 리뷰</MyLink>
-                        <MyLink to="/">설정</MyLink>
+                        <MyLink to="/edit">설정</MyLink>
                     </MenuBar>
                 </div>
             </header>
@@ -43,7 +45,7 @@ const NavBar = () => {
             </main>
         </div>
     );
-}
+};
 
 const Bookmark = styled(BsBookmark)`
     font-size: 18.5px;
@@ -65,11 +67,18 @@ const MenuBar = styled.div`
     padding-bottom: 10px;
 `
 
-const MyLink = styled.ul`
+const MyLink = styled(Link)`
     &:hover {
         color: #35C5F0;
         transition: 0.5s;
     }
+    text-decoration: none;
+    padding: 10px;
+    color: #292929;
+    text-align: center;
+    font-family: 'Inter';
+    font-size: 18px;
+    font-weight: 700;
 `
 
 const Button = styled.button `
@@ -78,7 +87,7 @@ const Button = styled.button `
     height: 43px;
 
     margin-left: 10px;
-    margin-top: 8px;
+    margin-bottom: 10px;
 
     display: flex;
     justify-content: center;

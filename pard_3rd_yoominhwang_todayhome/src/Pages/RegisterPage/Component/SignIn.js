@@ -10,7 +10,7 @@ function SignIn() {
 
 const Button = styled.button`
     background-color: #35C5F0;
-    width: 359px;
+    width: 100%;
     height: 50px;
 
     border-radius: 3px;
@@ -24,6 +24,10 @@ const Button = styled.button`
     font-weight: 700;
     line-height: 20.57px;
     text-align: center;
+
+    margin-bottom: 35px;
+
+    cursor: pointer;
 `;
 
 export default SignIn;

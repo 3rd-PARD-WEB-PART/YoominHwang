@@ -1,4 +1,4 @@
-h2 {
+.label {
     font-weight: 400;
     font-size: 13px;
 
@@ -13,7 +13,7 @@ h3 {
     line-height: 21.78px;
 }
 
-p {
+.heading {
     color: #000000;
     text-align: left;
     font-size: 18px;
@@ -50,6 +50,7 @@ p {
 
 .contents {
     background-color: #FFFFFF;
+    justify-content: center;
 }
 
 .profile-pic {
@@ -83,6 +84,7 @@ p {
 
 .box-wrapper {
     margin-top: 49.8px;
+    margin-left: 100px;
 }
 
 .box {

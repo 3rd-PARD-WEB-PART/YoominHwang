@@ -1,4 +1,4 @@
-import "../../../css/App.css";
+import "../../../css/Reg.css";
 
 function Input(props) {
     return(

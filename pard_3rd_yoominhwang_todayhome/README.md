@@ -47,9 +47,14 @@ Visual Studio Code
 - Figma: 과제2 [PARD_3rd_Web_Assignment] (https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
 
 # HW3
+## 과제 설명
+1. RegisterPage -> Profile
+2. Profile -> EditProfile
+3. EditProfile -> Profile
 
+`Router` 사용하여 페이지 이동 구현
 
 ## 자료
 - Figma: 과제2 [PARD_3rd_Web_Assignment] (https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
 - Icons: react-icons
-`npm install react-icons --save // npm`
+`npm install react-icons --save`

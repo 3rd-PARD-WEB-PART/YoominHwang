@@ -26,11 +26,12 @@ const NavBar = () => {
                             <img src="search.png" className="search-img" />
                             <input type="text" placeholder="통합검색"classname="search-bar" />
                         </div>
+                        <img src="search-black.png" className="search-tab" />
+                        <MyLink to="/" className="cart"><Cart /></MyLink>
                         <span className="icons">
-                            <img src="search-black.png" className="search-tab" />
                             <MyLink to="/"><Bookmark /></MyLink>
                             <MyLink to="/"><Bell /></MyLink>
-                            <MyLink to="/" className="cart"><Cart /></MyLink>
+                            <MyLink to="/"><Cart /></MyLink>
                         </span>
                         <img src="/profile.png" className="profile-icon" />
                         <Button className="write">

@@ -49,6 +49,13 @@
     .menu-img {
         display: none;
     }
+
+    .profile-icon {
+        width: 2.68rem;
+        height: 2.68rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 1023px) {
@@ -82,6 +89,13 @@
     .menu-img {
         display: none;
     }
+
+    .profile-icon {
+        width: 2.68rem;
+        height: 2.68rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.25rem;
+    }
 }   
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -93,10 +107,17 @@
     .menu-img {
         display: none;
     }
+
+    .profile-icon {
+        width: 2.68rem;
+        height: 2.68rem;
+        padding-bottom: 0.5rem;
+        padding-left: 1.25rem;
+    }
 }
 
 @media screen and (max-width: 767px) {
-    .menu1, .search, .profile-icon, .icons:not(:nth-child(4)), .icons:not(:nth-child(1)) {
+    .menu1, .search, .profile-icon, .icons {
         display: none;
     }
     
@@ -136,13 +157,6 @@ input {
 
 .icons {
     margin-top: 0.75rem;
-}
-
-.profile-icon {
-    width: 2.68rem;
-    height: 2.68rem;
-    padding-bottom: 0.5rem;
-    padding-left: 1.25rem;
 }
 
 .arrow {

@@ -147,6 +147,10 @@ const Line = styled.hr`
     @media screen and (max-width: 1023px) {
         width: 70vw;
     }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 `;
 
 const Bookmark = styled(BsBookmark)`
@@ -204,6 +208,11 @@ const ProfileBox = styled.div`
     @media screen and (min-width: 1024px) {
         width: 18rem;
         height: 29rem;
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100vw;
+        heigth: 29rem;
     }
 
     justify-content: center;

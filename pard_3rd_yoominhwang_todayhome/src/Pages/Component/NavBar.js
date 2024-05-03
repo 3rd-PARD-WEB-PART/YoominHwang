@@ -1,4 +1,4 @@
-import{Link, Outlet} from 'react-router-dom';
+import{Link, Outlet, NavLink} from 'react-router-dom';
 import styled from "styled-components";
 import { BsBookmark } from "react-icons/bs";
 import { SlBell } from "react-icons/sl";
@@ -6,11 +6,16 @@ import { BsCart } from "react-icons/bs";
 import "../../css/Layout.css";
 
 const NavBar = () => {
+    const activeStyle = {
+        color: "#35C5F0",
+    };
+
     return(
         <div>
             <header>
                 <div className="header-top">
                     <MenuBar>
+                        <img src="menu.png" className="menu-img" />
                         <MyLink to="/"><img src="/logo.png" className="logo" alt="Today Home" /></MyLink>
                         <div className="menu1">
                             <MyLink to="/">커뮤니티</MyLink>
@@ -19,13 +24,16 @@ const NavBar = () => {
                         </div>
                         <div class="search">
                             <img src="search.png" className="search-img" />
-                            <input type="text" placeholder="통합검색" />
+                            <input type="text" placeholder="통합검색"classname="search-bar" />
                         </div>
-                        <MyLink to="/"><Bookmark /></MyLink>
-                        <MyLink to="/"><Bell /></MyLink>
-                        <MyLink to="/"><Cart /></MyLink>
+                        <span className="icons">
+                            <img src="search-black.png" className="search-tab" />
+                            <MyLink to="/"><Bookmark /></MyLink>
+                            <MyLink to="/"><Bell /></MyLink>
+                            <MyLink to="/" className="cart"><Cart /></MyLink>
+                        </span>
                         <img src="/profile.png" className="profile-icon" />
-                        <Button>
+                        <Button className="write">
                             <span>글쓰기</span>
                             <span><img src="/arrow.png" className="arrow"/></span>
                         </Button>
@@ -33,10 +41,12 @@ const NavBar = () => {
                 </div>
                 <div className="header-bottom">
                     <MenuBar>
-                        <MyLink to="/profile">프로필</MyLink>
+                        <MyLink to={`/profile`} style={({isActive}) => (isActive ? activeStyle : undefined)}>프로필</MyLink>
                         <MyLink to="/">나의 쇼핑</MyLink>
                         <MyLink to="/">나의 리뷰</MyLink>
-                        <MyLink to="/edit">설정</MyLink>
+                        <MyLink to={`/edit`}
+                        style={({isActive}) => isActive ? activeStyle : undefined}
+                        >설정</MyLink>
                     </MenuBar>
                 </div>
             </header>
@@ -48,51 +58,50 @@ const NavBar = () => {
 };
 
 const Bookmark = styled(BsBookmark)`
-    font-size: 18.5px;
+    font-size: 1.15rem;
 `
 
 const Bell = styled(SlBell)`
-    font-size: 18.5px;
+    font-size: 1.15rem;
 `
 
 const Cart = styled(BsCart)`
-    font-size: 18.5px;
+    font-size: 1.15rem;
 `
 
 const MenuBar = styled.div`
     display: flex;
     justify-content: center;
 
-    font-size: 18px;
-    padding-bottom: 10px;
+    font-size: 1.125rem;
+    padding-bottom: 0.625rem;
 `
 
-const MyLink = styled(Link)`
+const MyLink = styled(NavLink)`
     &:hover {
         color: #35C5F0;
         transition: 0.5s;
     }
     text-decoration: none;
-    padding: 10px;
+    padding: 0.3rem;
     color: #292929;
     text-align: center;
     font-family: 'Inter';
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 `
 
 const Button = styled.button `
     background-color: #35C5F0;
-    width: 100px;
-    height: 43px;
+    width: 6.25rem;
+    height: 2.68rem;
 
-    margin-left: 10px;
-    margin-bottom: 10px;
+    margin-left: 0.625rem;
+    margin-bottom: 0.625rem;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8.08px;
 
     border-radius: 5px;
     border-color: #DBDBDB;
@@ -100,10 +109,14 @@ const Button = styled.button `
     border-style: solid;
 
     color: #FFFFFF;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 20.57px;
+    line-height: 1.28rem;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 `
 
 export default NavBar;

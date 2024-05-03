@@ -3,16 +3,21 @@ import styled from "styled-components";
 import { BsBookmark } from "react-icons/bs";
 import { BsTicketPerforated } from "react-icons/bs";
 import { useState } from "react";
-import { Navigate, Link, Outlet } from "react-router-dom";
-import { PiCursorClickDuotone } from "react-icons/pi";
+import { Navigate, Link, Outlet, NavLink } from "react-router-dom";
+import { useRecoilState } from "recoil";    
+import { myNickname } from "../../Atom";
 
 const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
     // const handleClick = () => {
     //     setIsLoggedIn(false);
     // };
 
+    const activeStyle = {
+        color: "#35C5F0",
+    };
     const [ heart, setHeart ] = useState(false);
 
+    const [nickname, setNickname] = useRecoilState(myNickname);
     // if(!isLoggedIn) {
     //     return <Navigate to="/profile" replace={true} />
     // }
@@ -22,32 +27,55 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
             <Outlet />
             <div className="header-bottom">
                 <MenuBar>
-                    <MyLink to="/">모두보기</MyLink>
-                    <MyLink to="/">사진</MyLink>
-                    <MyLink to="/">집들이</MyLink>
-                    <MyLink to="/">노하우</MyLink>
-                    <MyLink to="/">질문과답변</MyLink>
-                    <MyLink to="/">스크랩북</MyLink>
-                    <MyLink to="/">좋아요</MyLink>
+                    <MyLink to={`/profile`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        모두보기
+                    </MyLink>
+                    <MyLink to={`/`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        사진
+                    </MyLink>
+                    <MyLink to={`/`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        집들이
+                    </MyLink>
+                    <MyLink to={`/`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        노하우
+                    </MyLink>
+                    <MyLink to={`/`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        질문과답변
+                    </MyLink>
+                    <MyLink to={`/`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        스크랩북
+                    </MyLink>
+                    <MyLink to={`/`}
+                    style={({isActive}) => isActive ? activeStyle : undefined}>
+                        좋아요
+                    </MyLink>
                 </MenuBar>
             </div>
             <div className="contents">
                 <div></div>
-                <ProfileBox>
+                <ProfileBox className="profilebox-tab">
                     <div className="profile-top">
                         <div>
                             <img src="profile.png" className="profile-pic" alt="Profile Picture" />
                         </div>
-                        <div className="name">
-                            팡일Kim
+                        <div className="profile-top-detail">
+                            <div className="name">
+                                {nickname}
+                            </div>
+                            <div className="follow">
+                                <div></div>
+                                <Follow>팔로워 <span className="fnum">0</span></Follow>
+                                <Follow>팔로잉 <span className="fnum">0</span></Follow>
+                                <div></div>
+                            </div>
+                            <Link to="/edit"><Button className="setting">설정</Button></Link>
                         </div>
-                        <div className="follow">
-                            <div></div>
-                            <Follow>팔로워 <span className="fnum">0</span></Follow>
-                            <Follow>팔로잉 <span className="fnum">0</span></Follow>
-                            <div></div>
-                        </div>
-                        <Link to="/edit"><Button>설정</Button></Link>
                     </div>
                     <Line />
                     <div className="profile-bottom">
@@ -57,7 +85,7 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
                             <h3>0</h3> 
                         </div>
                         <div>
-                            <Heart  src={heart? "/redheart.png":"/heart.png"} className="heart-icon"
+                            <Heart  src={heart ? "/redheart.png":"/heart.png"} className="heart-icon"
                             onClick={() => {
                                 setHeart((heart) => !heart);
             
@@ -95,65 +123,68 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
 
 const Msg = styled.p`
     font-family: Inter;
-    font-size: 13px;
+    font-size: 0.81rem;
     font-weight: 700;
-    line-height: 15.73px;
+    line-height: 1rem;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 5rem;
     color: #757575;
-`
+`;
 
 const Box = styled.div`
-    width: 700px;
-    height: 187.28px;
+    width: 43.75rem;
+    height: 12rem;
 
     border: 1px dashed #757575;
-`
+`;
 
 const Line = styled.hr`
-    width: 231px;
+    width: 14rem;
     border: 1px solid #EAEBEF;
     border-radius: 10px;
-    margin-bottom: 27.89px;
-`
+    margin-bottom: 1.74rem;
+
+    @media screen and (max-width: 1023px) {
+        width: 70vw;
+    }
+`;
 
 const Bookmark = styled(BsBookmark)`
-    font-size: 24.9px;
-`
+    font-size: 1.5rem;
+`;
 
 const Heart = styled.img`
     &:hover {
         color: #F05656;
         transition: 0.5s;
     }
-    height: 24.9px;
-    width: 24.9px;
-`
+    height: 1.5rem;
+    width: 1.5rem;
+`;
 
 const Ticket = styled(BsTicketPerforated)`
-    font-size: 24.9px;
-`
+    font-size: 1.5rem;
+`;
 
 const MenuBar = styled.div`
     display: flex;
-`
+`;
 
-const MyLink = styled(Link)`
+const MyLink = styled(NavLink)`
     &:hover {
         color: #35C5F0;
         transition: 0.5s;
     }
-    padding: 10px;
-    padding-bottom: 5px;
+    padding: 0.625rem;
 
     text-decoration: none;
     color: #292929;
     font-family: Inter;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 18.15px;
+    line-height: 1.13rem;
     text-align: center;
-`
+`;
 
 const ProfileBox = styled.div`
     border-style: solid;
@@ -161,26 +192,41 @@ const ProfileBox = styled.div`
     border-width: 1px;
     border-radius: 3px;
 
-    width: 285px;
-    height: 460.24px;
+    @media screen and (max-width: 1023px) {
+        width: 70vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        flex-grow: 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 18rem;
+        height: 29rem;
+    }
 
     justify-content: center;
     align-items: center;
 
-    margin: 30.88px;
-    padding: 31.88px;
-`
+    margin: 1.93rem;
+    padding: 2rem;
+`;
 
 const Follow = styled.div`
     font-weight: 400;
-    font-size: 13px;
-    padding-top: 10px;
-    padding-bottom: 15px;
-`
+    font-size: 0.81rem;
+    padding-top: 0.625rem;
+    padding-bottom: 1rem;
+
+    @media screen and (max-width: 1023px) {
+        margin: 0.5rem;
+    }
+`;
 
 const Button = styled.button`
-    width: 60px;
-    height: 34.87px;
+    width: 3.75re,;
+    height: 2.15rem;
 
     border-style: solid;
     border-radius: 5px;
@@ -190,13 +236,13 @@ const Button = styled.button`
     color: #000000;
     background-color: #FFFFFF;
 
-    font-size: 13px;
+    font-size: 0.81rem;
     font-weight: 400;
 
-    margin: 10px;
-    margin-bottom: 20px;
+    margin: 0.625rem;
+    margin-bottom: 1.25rem;
 
     cursor: pointer;
-`
-  
+`;
+
 export default Profile;

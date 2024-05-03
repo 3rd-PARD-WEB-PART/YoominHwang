@@ -4,7 +4,7 @@ import { useState } from 'react';
 import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import Profile from './Pages/ProfilePage/Profile';
 import EditProfile from './Pages/EditPage/EditProfile';
-import NavBar from './Pages/Component/Layout'
+import NavBar from './Pages/Component/NavBar'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,6 +17,8 @@ const App = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/edit" element={<EditProfile />} />
         </Route>
+        
+        {/* HW3 */}
         {/* <Route element={<NavBar />}>
           <Route path="/profile" element={<Profile />} />
           <Route path="/edit" element={<EditProfile />} />

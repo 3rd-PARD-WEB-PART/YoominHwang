@@ -58,3 +58,13 @@ Visual Studio Code
 - Figma: 과제2 [PARD_3rd_Web_Assignment] (https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)
 - Icons: react-icons
 `npm install react-icons --save`
+
+# HW4
+## 과제 설명
+1. 회원가입 시 입력한 정보 Atom에 저장
+2. '설정' 에서 회원정보 수정 시 Atom에 저장된 정보가 불러와진 후 수정
+
+전역 상태 라이브러리 `Recoil` 사용하여 반응형 웹 디자인 구축
+
+## 자료
+- Figma: 과제4 [PARD_4th_Web_Assignment] (https://www.figma.com/file/NnwemC1zgBwMLPRpDgB5uh/PARD_3rd_WEB_Assignment?type=design&node-id=0%3A1&mode=design&t=M5P3xgMNydr1INo2-1)

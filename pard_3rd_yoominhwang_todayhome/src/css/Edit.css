@@ -1,75 +1,71 @@
 .edit-contents {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #FFFFFF;
 }
 
 .edit-contents-wrapper {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
 
-    width: 1236px;
-    height: 956px;
+    width: 75rem;
+    height: 70rem;
 
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px 0px #00000033;
 
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
-.edit-email {
-    width: 400px;
+    margin-top: 3.75rem;
+    margin-bottom: 3.5rem;
 }
 
 .edit-side {
-    display: grid;
-    justify-content: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-email {
+    width: 30rem;
 }
 
 .leave {
-    margin-top: 59px;
-    margin-right: 50px;
+    margin-top: 4rem;
+    margin-right: 3rem;
 
     color: #F05656;
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 16.94px;
+    line-height: 1.5rem;
 }
 
 .component {
     display: grid;
     grid-template-columns: auto auto;
-    margin: 40px;
-}
-
-.edit-header {
-    margin-top: 50px;
-    margin-left: 80px;
-    text-align: left;
+    margin: 2.5rem;
 }
 
 .input-wrapper {
     border-style: none;
-    width: 400px;
+    width: 25rem;
     display: grid;
     grid-template-columns: auto auto auto;
     justify-content: left;
 }
 
 .component-label {
-    width: 88px;
-    font-size: 15px;
+    width: 5.5rem;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 18.15px;
+    line-height: 1.13rem;
     text-align: left;
-    padding-top: 10px;
-    margin-right: 12px;
+    padding-top: 0.625rem;
+    margin-right: 0.75rem;
 }
 
 .required {
-    font-size: 13px;
+    font-size: 0.8rem;
     font-weight: 400;
-    line-height: 15.73px;
+    line-height: 1rem;
     text-align: left;
     color: #757575;
 }
@@ -80,64 +76,38 @@
     justify-content: left;
 }
 
-.edit-input {
-    width: 190px;
-    height: 40px;
-    border-radius: 6px;
-    border: 1px solid #DBDBDB;
-    margin: 5px;
-
-    text-align: left;
-    display: flex;
-    align-items: center;
-
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 18.15px;
-}
-
 .edit-input-single {
-    width: 400px;
-    height: 40px;
+    width: 25rem;
+    height: 2.5rem;
     border-radius: 6px;
     border: 1px solid #DBDBDB;
-    margin: 5px;
+    margin: 0.3rem;
 
     text-align: left;
     display: flex;
     align-items: center;
 
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 18.15px;
+    line-height: 1.13rem;
 }
 
 .separator {
     text-align: center;
     display: flex;
-    flex: 0 0 20px;
-    line-height: 40px;
+    flex: 0 0 1.25rem;
+    line-height: 2.5rem;
     color: #DBDBDB;
-}
-
-.message {
-    margin: 10px;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 15.73px;
-    text-align: left;
-    font-variation-settings: 'slnt' 0;
-    color: #9E9E9E;
 }
 
 .edit-info {
     text-align: left;
-    padding-left: 50px;
+    padding-left: 3.125rem;
 }
 
 .edit-button {
     display: flex;
-    width: 1236px;
+    width: 77rem;
     justify-content: right;
 }
 

@@ -12,18 +12,18 @@
 
 
 .Wrapper {
-  width: 635px;
-  margin: 80px;
+  width: 39.6rem;
+  margin: 5rem;
   background-color: #FFFFFF;
 }
 
 .logocontainer {
   text-align: left;
-  margin-left: 14px;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  width: 89.42px;
-  height: 31px;
+  margin-left: 0.875rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  width: 5.58rem;
+  height: 1.93rem;
 }
 
 .container {
@@ -33,41 +33,41 @@
 }
 
 .header {
-  padding-top: 17px;
-  padding-bottom: 40px;
-  height: 24px;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+  height: 1.5rem;
 
-  font-size: 20px;
-  line-height: 24.2px;
+  font-size: 1.25rem;
+  line-height: 4rem;
   text-align: left;
 }
 
 .info {
-  font-size: 15px;
-  line-height: 18.15px;
+  font-size: 1rem;
+  line-height: 1.13rem;
 }
 
 .title {
-  font-size: 15px;
-  line-height: 18.15px;
+  font-size: 1rem;
+  line-height: 1.13rem;
   text-align: left;
 }
 
 .input {
-  width: 360px;
+  width: 22.5rem;
 
-  margin-bottom: 32px;
-  padding-left: 9px;
+  margin-bottom: 2rem;
+  padding-left: 0.56rem;
 
   border-radius: 5px;
   border: 1px;
   border-style: solid;
   border-color: #DBDBDB;
 
-  font-size: 15px;
+  font-size: 1rem;
   
-  line-height: 18.15px;
-  text-indent: 15px;
+  line-height: 1.13rem;
+  text-indent: 1rem;
 }
 
 ::-webkit-input-placeholder { color: #EAEBEF; }

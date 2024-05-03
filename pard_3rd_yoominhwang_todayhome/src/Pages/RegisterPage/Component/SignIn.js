@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+    const navigator = useNavigate();
+
+    const submitHandler = () => {
+        alert("회원가입되었습니다.");
+        navigator("/profile");
+    }
+
     return (
         <div>
-            <Button>회원가입하기</Button>
+            <Button onClick={submitHandler}>회원가입하기</Button>
         </div>
     );
 }

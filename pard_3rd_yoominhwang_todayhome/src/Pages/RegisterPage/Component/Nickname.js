@@ -1,13 +1,20 @@
-import "../../../css/Reg.css";
-import { myInfoSelector } from "../../../Atom";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { userInfoSet } from "../../../Atom";
+import "../../../css/App.css";
+// import { myInfoSelector } from "../../../Atom";
+import { useRecoilValue, useRecoilState } from "recoil";
 
 function Nickname() {
-    const myInfo = useRecoilValue(myInfoSelector);
-    const setMyInfo = useSetRecoilState(myInfoSelector);
+    // const myInfo = useRecoilValue(myInfoSelector);
+    // const setMyInfo = useSetRecoilState(myInfoSelector);
+
+    // const onChange = (e) => {
+    //     setMyInfo({...myInfo, nickname: e.target.value})
+    // }
+
+    const [tempInfo, setTempInfo] = useRecoilState(userInfoSet);
 
     const onChange = (e) => {
-        setMyInfo({...myInfo, nickname: e.target.value})
+      setTempInfo({...tempInfo, nickname: e.target.value});
     }
 
     return (

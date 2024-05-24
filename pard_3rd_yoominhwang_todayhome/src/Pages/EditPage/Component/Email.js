@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import "../../../css/Edit.css";
-import { myEmail, myDomain } from "../../../Atom";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import { myInfoSelector } from "../../../Atom";
-import { useState } from "react";
+import "../../../css/App.css";
+// import { myEmail, myDomain } from "../../../Atom";
+import { getUserData } from "../../../API/AxiosAPI";
+import { useRecoilValue, useRecoilState } from "recoil";
+import { userInfoSet } from "../../../Atom";
+import { useState, useEffect } from "react";
 
 
 function Email() {
@@ -11,16 +12,41 @@ function Email() {
     // const [email, setEmail] = useState("webpart");
     // const [domain, setDomain] = useState("pard.com");
 
-    const myInfo = useRecoilValue(myInfoSelector);
+    // HW4
+    // const myInfo = useRecoilValue(myInfoSelector);
+
+    const id = 1;
+    const [userInfo, setUserInfo] = useRecoilState(userInfoSet);
+    const [tempUserInfo, setTempUserInfo] = useState({});
+    const emailSplit = userInfo.email.split('@');
+
+    const getMemberData = async(id) => {
+      try {
+        const response = await getUserData(id);
+        setTempInfo ((userInfo) => ({
+          ...userInfo,
+          email: response.data.email,
+          e: emailSplit[0],
+          domain: emailSplit[1]
+        }))
+      } catch(err) {
+        console.error(err);
+      }
+    }
+
+    useEffect(() => {
+      getUserData(id);
+      console.log(tempInfo);
+    }, [])
 
     return (
         <div className="component">
             <div className="component-label">이메일<p className="required">* 필수항목</p></div>
             <div className="component-element">
                 <div className="input-wrapper">
-                    <Input value={myInfo.email} readonly />
+                    <Input value={tempInfo.e} readonly />
                     <span className="separator">@</span>
-                    <Input value={myInfo.domain} readonly />
+                    <Input value={tempInfo.domain} readonly />
                 </div>
                 <Msg>이메일을 변경하시려면 운영자에게 이메일을 보내주세요.</Msg>
             </div>

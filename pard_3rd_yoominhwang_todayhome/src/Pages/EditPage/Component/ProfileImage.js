@@ -1,17 +1,25 @@
-import "../../../css/Edit.css";
+import "../../../css/App.css";
 import { useCallback, useRef } from "react";
-import { useSetRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import styled from "styled-components";
-import { myInfoSelector } from "../../../Atom";
+import { userInfo } from "../../../Atom";
 
 function ProfileImage() {
     const fileInput = useRef(null);
-    const myInfo = useRecoilValue(myInfoSelector)
-    const setMyInfo = useSetRecoilState(myInfoSelector);
+    const [myInfo, setMyInfo] = useRecoilState(userInfo);
 
     const onCancel = () => {
         fileInput.current.value = "";
     }
+
+    const handleFileInputChange = (e) => {
+      const file = e.target.files[0];
+      const imageUrl = URL.createObjectURL(file);
+      setMyInfo((prevUserInfo) => ({
+        ...prevUserInfo,
+        profile: imageUrl,
+      }));
+    };
 
     const fileInputHandler = useCallback((e) => {
         const files = e.target && e.target.files;
@@ -24,7 +32,7 @@ function ProfileImage() {
         <div className="component">
             <div className="component-label">프로필 이미지</div>
             <span className="component-element">
-                <File type="file" accept="image/*" ref={fileInput} />
+                <File type="file" ref={fileInput} onChange={handleFileInputChange} styled={{ display: "none" }} />
                 <Button onClick={onCancel}>Cancel</Button>
             </span>
         </div>

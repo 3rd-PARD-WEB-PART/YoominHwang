@@ -1,8 +1,9 @@
-import "../../../css/Edit.css";
+import "../../../css/App.css";
 import styled from "styled-components";
-import { myInfoSelector } from "../../../Atom";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import { useState } from "react";
+import { userInfo } from "../../../Atom";
+import { useRecoilValue, useRecoilState } from "recoil";
+import { getUserData } from "../../../API/AxiosAPI";
+import { useState, useEffect } from "react";
 
 function Gender() {
     // const [gender, setGender] = useState(1);
@@ -10,21 +11,50 @@ function Gender() {
     //     setGender(Number(e.target.value));
     // };
 
-    const myInfo = useRecoilValue(myInfoSelector);
-    const setMyInfo = useSetRecoilState(myInfoSelector);
+    // HW4
+    // const myInfo = useRecoilValue(myInfoSelector);
+    // const setMyInfo = useSetRecoilState(myInfoSelector);
 
-    const radioHandler = (e) => {
-        setMyInfo({...myInfo, gender: Number(e.target.value)});
-    };
+    // const radioHandler = (e) => {
+    //     setMyInfo({...myInfo, gender: Number(e.target.value)});
+    // };
+
+    const id = 1;
+    const [userInfo, setUserInfo] = useRecoilState(userInfoSet);
+    const [tempUserInfo, setTempUserInfo] = useState({});
+
+    const onChange = (e) => {
+        setTempUserInfo ({
+          ...userInfo.gender,
+          gender: Number(e.target.value)
+        });
+    }
+
+    const getMemberData = async(id) => {
+      try {
+        const response = await getUserData(id);
+        setTempInfo ((tempInfo) => ({
+          ...tempInfo,
+          gender: response.data.gender,
+        }))
+      } catch(err) {
+        console.error(err);
+      }
+    }
+
+    useEffect(() => {
+      getUserData(id);
+      console.log(tempInfo);
+    }, [])
     
     return (
         <div className="component">
             <div className="component-label">성별</div>
             <RadioContainer>
                 <div>
-                    <Radio type="radio" value={0} onChange={radioHandler} checked={myInfo.gender === 0} />
+                    <Radio type="radio" value={0} onChange={onChange} checked={tempInfo.gender === 0} />
                     <Label>남성</Label>
-                    <Radio value={1} onChange={radioHandler} checked={myInfo.gender === 1} />
+                    <Radio value={1} onChange={onChange} checked={tempInfo.gender === 1} />
                     <Label>여성</Label>
                 </div>
             </RadioContainer>

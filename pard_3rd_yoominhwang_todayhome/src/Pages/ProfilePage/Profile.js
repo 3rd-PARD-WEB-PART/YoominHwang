@@ -1,11 +1,12 @@
-import "../../css/Profile.css";
+import "../../css/App.css";
 import styled from "styled-components";
 import { BsBookmark } from "react-icons/bs";
 import { BsTicketPerforated } from "react-icons/bs";
-import { useState } from "react";
-import { Navigate, Link, Outlet, NavLink } from "react-router-dom";
-import { useRecoilState } from "recoil";    
-import { myNickname } from "../../Atom";
+import { useState, useEffect, useRef } from "react";
+import { getUserData } from "../../API/AxiosAPI";
+import { Link, Outlet, NavLink } from "react-router-dom";
+import { useRecoilValue } from "recoil";    
+import { userInfoSet } from "../../Atom";
 
 const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
     // const handleClick = () => {
@@ -17,7 +18,10 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
     };
     const [ heart, setHeart ] = useState(false);
 
-    const [nickname, setNickname] = useRecoilState(myNickname);
+    const userInfo = useRecoilValue(userInfoSet);
+
+    const fileInput = useRef();
+
     // if(!isLoggedIn) {
     //     return <Navigate to="/profile" replace={true} />
     // }
@@ -59,14 +63,14 @@ const Profile = ({ isLoggedIn, setIsLoggedIn }) => {
             </div>
             <div className="contents">
                 <div></div>
-                <ProfileBox className="profilebox-tab">
+                <ProfileBox>
                     <div className="profile-top">
                         <div>
-                            <img src="profile.png" className="profile-pic" alt="Profile Picture" />
+                            <img src={userInfo.profileImage} className="profile-pic" alt="profile image" />
                         </div>
                         <div className="profile-top-detail">
                             <div className="name">
-                                {nickname}
+                                {userInfo.nickname}
                             </div>
                             <div className="follow">
                                 <div></div>
@@ -136,6 +140,10 @@ const Box = styled.div`
     height: 12rem;
 
     border: 1px dashed #757575;
+
+    @media screen and (max-width: 1023px) {
+      width: 70vw;
+    }
 `;
 
 const Line = styled.hr`
@@ -200,7 +208,7 @@ const ProfileBox = styled.div`
         width: 70vw;
         height: 50vh;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: wrap;
         flex-grow: 0;
     }

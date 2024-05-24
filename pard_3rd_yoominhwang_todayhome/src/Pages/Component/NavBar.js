@@ -1,9 +1,10 @@
-import{Link, Outlet, NavLink} from 'react-router-dom';
+import{Outlet, NavLink} from 'react-router-dom';
 import styled from "styled-components";
 import { BsBookmark } from "react-icons/bs";
 import { SlBell } from "react-icons/sl";
 import { BsCart } from "react-icons/bs";
-import "../../css/Layout.css";
+import { RiMenuFill } from "react-icons/ri";
+import "../../css/App.css";
 
 const NavBar = () => {
     const activeStyle = {
@@ -15,7 +16,7 @@ const NavBar = () => {
             <header>
                 <div className="header-top">
                     <MenuBar>
-                        <img src="menu.png" className="menu-img" />
+                        <MenuIcon />
                         <MyLink to="/"><img src="/logo.png" className="logo" alt="Today Home" /></MyLink>
                         <div className="menu1">
                             <MyLink to="/">커뮤니티</MyLink>
@@ -58,6 +59,14 @@ const NavBar = () => {
     );
 };
 
+const MenuIcon = styled(RiMenuFill)`
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    width: 1.15rem;
+    height: 1.15rem;
+`
+
 const Bookmark = styled(BsBookmark)`
     font-size: 1.15rem;
 `
@@ -73,7 +82,7 @@ const Cart = styled(BsCart)`
 const MenuBar = styled.div`
     display: flex;
     justify-content: center;
-
+    
     font-size: 1.125rem;
     padding-bottom: 0.625rem;
 `

@@ -1,4 +1,4 @@
-import "../../../css/Reg.css";
+import "../../../css/App.css";
 
 function Password() {
     return (
